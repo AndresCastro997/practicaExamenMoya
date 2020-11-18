@@ -1,0 +1,35 @@
+@page
+@model CrearModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1> Crear un Luchador </h1>
+
+<div asp-validation-summary="All"></div>
+<form method="POST">
+  <div class="form-group">
+    <label for="Nombre">Nombre</label>
+    <input type="text" asp-for="Nombre" class="form-control"
+         id="Nombre" aria-describedby="">
+    <span asp-validation-for="Nombre"></span>
+  </div>
+  <div class="form-group">
+    <label for="Marca">Marca</label>
+    <input type="text"asp-for="Marca" class="form-control"
+          aria-describedby="">
+         <span asp-validation-for="Marca"></span>
+    
+  </div>
+  <div class="form-group">
+    <label for="Edad">Edad</label>
+    <input type="text" class="form-control"
+        name="Edad" id="Edad" aria-describedby="">
+    
+  </div>
+  <div class="form-group">
+    <label for="Genero">Genero</label>
+    <input type="text" class="form-control"
+        name="Genero" id="Genero" aria-describedby="">
+    
+  </div>
+
+  <button type="submit" class="btn btn-primary">Crear</button>
+</form>
